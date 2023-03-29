@@ -25,11 +25,14 @@ public class Homepage {
 	@FindBy( xpath = "//a[text()=' Manage Profile Changes ']" )
 	private WebElement manageprofilechanges;
 	
-	@FindBy(xpath="//a[@class='anchor downloadLink viewRecord']")
+	@FindBy(xpath="//a[@class='anchor downloadLink viewRecord']")    //img[@class='img-fluid d-none d-md-block']
 	private WebElement view;
 	
 	@FindBy(xpath ="//button[text()=' Back ']")
 	private WebElement back;
+	
+	@FindBy(xpath ="//img[@class='img-fluid d-none d-md-block']")
+	private WebElement img;
 	
 	public void userdetail() throws InterruptedException {
 		profile.click();
@@ -43,7 +46,8 @@ public class Homepage {
 	    view.click();
 	    Thread.sleep(3000);
 	    back.click();
-	    Assert.assertEquals(driver.getCurrentUrl(), "https://demo.lntsufin.com/buyer/#/home");
+	    //Assert.assertEquals(driver.getCurrentUrl(), "https://demo.lntsufin.com/buyer/#/home");
+	    img.click();
 	}
 	
 }

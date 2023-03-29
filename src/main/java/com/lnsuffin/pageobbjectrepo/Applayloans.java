@@ -15,17 +15,17 @@ public class Applayloans {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 }
-	@FindBy(xpath = "//span[text()='Apply for Loan']")
+	@FindBy(xpath = "//span[contains(text(),'Apply for Loan')]")  //span[contains(text(),'Apply for Loan')]
 	private WebElement apploans;
 	
-	@FindBy(xpath = "//button[text()=' AVAIL NOW ']")
+	@FindBy(xpath = "//button[text()=' AVAIL NOW ']")          //span[text()='Apply for Loan']
 	private WebElement AVAILNOW;
 	
-	//@FindBy(xpath = "//a[text()=' Offered Rate of Interest ']")
-	//private WebElement OfferedRate;
+	@FindBy(xpath = "//a[text()=' Offered Rate of Interest ']")
+	private WebElement OfferedRate;
 	
-	//@FindBy(xpath = "//button[text()='OK'")
-	//private WebElement OK;
+	@FindBy(xpath = "//button[text()='OK'")
+	private WebElement OK;
 	
 	public void loans() throws Throwable {
 		apploans.click();
@@ -33,8 +33,8 @@ public class Applayloans {
 		//web.scrollAction(driver);
 		 AVAILNOW.click();
 		 Thread.sleep(2000);                                         
-	//	 OfferedRate.click();
-		// Thread.sleep(2000);
-		// OK.click();
+	OfferedRate.click();
+		 Thread.sleep(2000);
+	 OK.click();
 	}
 }
