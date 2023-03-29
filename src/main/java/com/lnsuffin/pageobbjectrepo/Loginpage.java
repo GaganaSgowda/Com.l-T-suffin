@@ -65,6 +65,7 @@ public WebElement getSubmit() {
 	return submit;
 }
 public void Loginmethod(String eamil, String pwd) throws Throwable  {
+	Login.isDisplayed();
 	Login.click();
 	Thread.sleep(3000);
 	LoginButton.click();
