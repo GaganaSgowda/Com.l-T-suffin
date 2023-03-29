@@ -5,7 +5,6 @@
     <classes>
       <class name="com.lnsuffin.twc">
         <methods>
-          <include name="homepage"/>
           <include name="Login"/>
           <include name="applayloans"/>
           <include name="startUp"/>
